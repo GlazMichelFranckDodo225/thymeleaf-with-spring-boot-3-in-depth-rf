@@ -10,10 +10,12 @@ public class HelloWorldController {
     // http://localhost:8080/hello-world
     @GetMapping("/hello-world")
     public String helloWorld(Model model) {
+        // Store Data into Model
         model.addAttribute(
                 "message", "Hello World !"
         );
 
+        // Return Thymeleaf Html Template View Name
         return "hello-world";
     }
 }
