@@ -44,4 +44,12 @@ public class UserController {
         // Return Thymeleaf Html Template View Name
         return "selection-expression";
     }
+
+    // Handler Method for "/message-expression" Request
+    // http://localhost:8080/message-expression
+    @GetMapping("/message-expression")
+    public String messageExpression() {
+        // Return Thymeleaf Html Template View Name
+        return "message-expression";
+    }
 }
