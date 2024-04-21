@@ -25,4 +25,23 @@ public class UserController {
         // Return Thymeleaf Html Template View Name
         return "variable-expression";
     }
+
+    // Handler Method for "/selection-expression" Request
+    // http://localhost:8080/selection-expression
+    @GetMapping("/selection-expression")
+    public String selectionExpression(Model model) {
+        // User Object
+        User user = User.builder()
+                .name("John Doe")
+                .email("johndoe@gmail.com")
+                .role("ADMIN")
+                .gender("Male")
+                .build();
+
+        // Store User Object into Model
+        model.addAttribute("user", user);
+
+        // Return Thymeleaf Html Template View Name
+        return "selection-expression";
+    }
 }

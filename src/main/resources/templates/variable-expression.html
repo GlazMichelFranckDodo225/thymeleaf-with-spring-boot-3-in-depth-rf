@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Thymeleaf Variable Expressions Template</title>
 </head>
+
 <body>
     <!-- 
         Thymeleaf Variable Expression Template View to Display Model Data 
@@ -12,9 +14,12 @@
     <h1>Thymeleaf Variable Expressions</h1>
     <h2>User Details :</h2>
     <!-- Variable Expressions -->
-    <p><strong>Name</strong> : <span th:text="${user.name}"></span></p>
-    <p><strong>Email</strong> : <span th:text="${user.email}"></span></p>
-    <p><strong>Role</strong> : <span th:text="${user.role}"></span></p>
-    <p><strong>Gender</strong> : <span th:text="${user.gender}"></span></p>
+    <div>
+        <p><strong>Name</strong> : <span th:text="${user.name}"></span></p>
+        <p><strong>Email</strong> : <span th:text="${user.email}"></span></p>
+        <p><strong>Role</strong> : <span th:text="${user.role}"></span></p>
+        <p><strong>Gender</strong> : <span th:text="${user.gender}"></span></p>
+    </div>
 </body>
+
 </html>
