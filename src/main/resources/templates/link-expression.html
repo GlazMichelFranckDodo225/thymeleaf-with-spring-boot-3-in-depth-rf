@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Link Expressions Template</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <!-- 
+        Thymeleaf Link Expression Template View to Display Model Data 
+        Added in "selectionExpression" Handler Method (UserController)
+    -->
+    <h1>Thymeleaf Link Expressions</h1>
+    <div>
+        <p><a href="#" th:href="@{/variable-expression}">Variable Expression</a></p>
+        <p><a href="#" th:href="@{/selection-expression}">Selection Expression</a></p>
+        <p><a href="#" th:href="@{/message-expression}">Message Expression</a></p>
+        <p><a href="#" th:href="@{/link-expression/{id}(id=${id})}">Link Expression With Parameter</a></p>
+    </div>
+</body>
+
+</html>
