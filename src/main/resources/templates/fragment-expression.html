@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Fragment Expressions Template</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <!-- 
+        Thymeleaf Fragment Expression Template View to Display Model Data 
+        Added in "selectionExpression" Handler Method (UserController)
+    -->
+    <h1>Thymeleaf Fragment Expressions</h1>
+    <div th:replace="~{common/header :: header}"></div>
+    <div><h1>Page Body</h1></div>
+    <div th:replace="~{common/footer :: footer}"></div>
+</body>
+
+</html>

@@ -61,4 +61,13 @@ public class UserController {
         // Return Thymeleaf Html Template View Name
         return "link-expression";
     }
+
+    // Handler Method for "/fragment-expression" Request
+    // http://localhost:8080/fragment-expression
+    @GetMapping("/fragment-expression")
+    public String fragmentExpression(Model model) {
+        model.addAttribute("id", 1);
+        // Return Thymeleaf Html Template View Name
+        return "fragment-expression";
+    }
 }
