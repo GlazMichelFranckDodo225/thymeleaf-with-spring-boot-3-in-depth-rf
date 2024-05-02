@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class UserController {
     // Handler Method for "/variable-expression" Request
@@ -69,5 +72,37 @@ public class UserController {
         model.addAttribute("id", 1);
         // Return Thymeleaf Html Template View Name
         return "fragment-expression";
+    }
+
+    // Handler Method for "/users" Request
+    // http://localhost:8080/users
+    @GetMapping("/users")
+    public String users(Model model) {
+        User admin = User.builder()
+                .name("Admin")
+                .email("admin@gmail.com")
+                .role("ADMIN")
+                .gender("Male")
+                .build();
+
+        User johnDoe = User.builder()
+                .name("John Doe")
+                .email("johndoe@gmail.com")
+                .role("USER")
+                .gender("Male")
+                .build();
+
+        User monikaLewinsky = User.builder()
+                .name("Monika Lewinsky")
+                .email("monikalewinsky@gmail.com")
+                .role("USER")
+                .gender("Female")
+                .build();
+
+        List<User> users = new ArrayList<>(List.of(admin, johnDoe, monikaLewinsky));
+
+        model.addAttribute("users", users);
+        // Return Thymeleaf Html Template View Name
+        return "users";
     }
 }
