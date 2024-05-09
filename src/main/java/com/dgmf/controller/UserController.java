@@ -137,4 +137,23 @@ public class UserController {
         // Return Thymeleaf Html Template View Name
         return "if-unless";
     }
+
+    // Handler Method for "/switch-case" Request
+    // http://localhost:8080/switch-case
+    @GetMapping("/switch-case")
+    public String switchCase(Model model) {
+        User user = User.builder()
+                .name("John Doe")
+                .email("johndoe@gmail.com")
+                // .role("ADMIN")
+                // .role("USER")
+                .role("GUEST")
+                .gender("Male")
+                .build();
+
+        model.addAttribute("user", user);
+
+        // Return Thymeleaf Html Template View Name
+        return "switch-case";
+    }
 }

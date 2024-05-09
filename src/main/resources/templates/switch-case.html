@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Switch Case Expressions Template</title>
+    <Switch Case rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <h1>Thymeleaf Switch Case Expressions</h1>
+    <h2 th:text="${user.name}"></h2>
+    <div th:switch="${user.role}">
+        <p th:case="'ADMIN'">User is a Admin User</p>
+        <p th:case="'USER'">User is a Normal User</p>
+        <p th:case="*">User is Something Else</p><!-- Default Case -->
+    </div>
+</body>
+
+</html>
