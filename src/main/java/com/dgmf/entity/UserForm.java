@@ -14,6 +14,6 @@ public class UserForm {
     private String password;
     private String gender;
     private String address;
-    private Boolean married;
+    private boolean married;
     private String profession;
 }
