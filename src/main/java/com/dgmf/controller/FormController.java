@@ -21,6 +21,6 @@ public class FormController {
         model.addAttribute("userForm", userForm);
         model.addAttribute("listOfProfessions", listOfProfessions);
 
-        return "register-form";
+        return "form/register-form";
     }
 }
